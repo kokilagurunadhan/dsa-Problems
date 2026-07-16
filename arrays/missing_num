@@ -1,0 +1,6 @@
+n=[0,1,2,3,4,5,6,8,9,10]
+l=len(n)
+xor=l
+for i in range(l):
+    xor^=i^n[i]
+print(xor)
