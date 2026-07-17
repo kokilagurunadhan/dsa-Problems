@@ -1,0 +1,11 @@
+a=[0,1,2,0,0,3,4]
+key=3
+f=0
+for i in range(len(a)):
+    if(a[i]==key):
+        f=1
+        break
+if(f):
+    print("found at",i+1)
+else:
+    print('not found')
