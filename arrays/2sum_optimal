@@ -1,0 +1,17 @@
+n=[2,7,4,5]
+t=9
+l=0
+r=len(n)-1
+n.sort()
+while l<r:
+    tot=n[l]+n[r]
+    if(tot==t):
+        print(n[l],n[r])
+        l+=1
+        r-=1
+    elif(tot< t):
+        l+=1
+    else:
+        r-=1
+
+        
