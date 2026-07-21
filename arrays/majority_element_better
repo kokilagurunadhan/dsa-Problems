@@ -1,0 +1,9 @@
+n=[2,3,3,34,3,4,3,3]
+f={}
+for i in n:
+    f[i]=f.get(i,0)+1
+print(f)
+for j in f:
+    if(f[j]>=(len(n)/2)):
+        print(j)
+        
