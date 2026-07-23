@@ -1,0 +1,16 @@
+n=[2,1,0,2,0,1]
+l=0
+h=len(n)-1
+mid=0
+while mid<=h:
+    if(n[mid]==0):
+        n[l],n[mid]=n[mid],n[l]
+        l+=1
+        mid+=1
+    elif(n[mid]==1):
+        mid+=1
+    else:
+        n[h],n[mid]=n[mid],n[h]
+        h-=1
+print(n)
+    
