@@ -1,0 +1,22 @@
+class Solution(object):
+    def decodeString(self, s):
+       stack=[]
+       current=""
+       num=0
+       for i in s:
+        if i.isdigit():
+            num=num*10+int(i)
+        elif i == "[":
+            stack.append(current)
+            stack.append(num)
+            current=""
+            num=0
+        elif  i == "]":
+            repeat= stack.pop()
+            previous=stack.pop()
+            current=previous+current*repeat
+        else:
+            current+=i
+       return current
+
+        
