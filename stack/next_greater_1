@@ -1,0 +1,17 @@
+class Solution(object):
+    def nextGreaterElement(self, nums1, nums2):
+        ans={}
+        stack=[]
+        answer=[]
+        for i in range(len(nums2)-1,-1,-1):
+            current=nums2[i]
+            while (stack and stack[-1]<=current):
+                stack.pop()
+            if stack:
+                ans[current]=stack[-1]
+            else:
+                ans[current]=-1
+            stack.append(current)
+        for i in nums1:
+            answer.append(ans[i])
+        return answer
