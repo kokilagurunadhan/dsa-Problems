@@ -1,0 +1,15 @@
+class Solution(object):
+    def isAnagram(self, s, t):
+        if len(s)!=len(t):
+            return False
+        hm1={}
+        hm2={}
+        for i in s:
+            hm1[i]=hm1.get(i,0)+1
+        for i in t:
+            hm2[i]=hm2.get(i,0)+1
+        return hm1==hm2
+
+
+
+        
