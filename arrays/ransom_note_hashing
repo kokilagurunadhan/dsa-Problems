@@ -1,0 +1,18 @@
+class Solution(object):
+    def canConstruct(self, ransomNote, magazine):
+        r=ransomNote
+        m=magazine
+        if len(m)<len(r):
+            return False
+        hm1={}
+        hm2={}
+        for i in r:
+            hm1[i]=hm1.get(i,0)+1
+        for i in m:
+            hm2[i]=hm2.get(i,0)+1
+        for i in r:
+            if hm1[i]>hm2.get(i,0):
+                return False
+        return True
+
+        
