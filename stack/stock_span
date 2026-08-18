@@ -1,0 +1,17 @@
+class StockSpanner(object):
+
+    def __init__(self):
+        self.stack=[]
+        
+
+    def next(self, price):
+        
+        span=1
+        while self.stack and self.stack[-1][0]<=price:
+            pre_price,pre_span=self.stack.pop()
+            span+=pre_span
+        self.stack.append((price,span))
+        return span
+        
+
+
