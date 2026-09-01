@@ -1,0 +1,10 @@
+class Solution(object):
+    def containsDuplicate(self, nums):
+        hm={}
+        for i in range(len(nums)):
+            if nums[i] in hm:
+                return True
+            hm[nums[i]]=i
+
+        return False
+        
