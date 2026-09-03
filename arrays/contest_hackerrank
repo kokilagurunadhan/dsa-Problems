@@ -1,0 +1,21 @@
+def performOperations(N, op):
+    # Write your code here
+    ans=[]
+    a=list(range(1,N+1))
+    present=set(a)
+    total=N*(N+1)//2
+    
+    for x in op:
+        if x in present:
+            a[0],a[-1]=a[-1],a[0]
+        else:
+            removed=a[-1]
+            a[-1]=x
+            present.remove(removed)
+            present.add(x)
+            total=total-removed+x
+            
+            
+        
+        ans.append(total)
+    return ans
