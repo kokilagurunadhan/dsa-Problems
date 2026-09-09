@@ -2,6 +2,7 @@ class Solution(object):
     def searchInsert(self, nums, target):
         flag=False
         l=0
+        r=0
         r=len(nums)-1
         while l<=r:
             mid=(l+r)//2
